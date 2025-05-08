@@ -80,7 +80,8 @@ For the RGB LED, three GPIO pins (PA16, PA17, PA18) were connected through 220Ω
 Each of these components was validated both individually and in system context, ensuring that the system accurately captured motion data, responded with visual and audio feedback, and maintained task-level synchronization under FreeRTOS.
 
 ## 4. Project Photos & Screenshots
-
+![alt text](IMG_4147.jpg)
+![alt text](IMG_4149.jpg)
 
 
 ## Codebase
