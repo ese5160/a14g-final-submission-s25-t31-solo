@@ -8,7 +8,7 @@
     * Description of test hardware: (development boards, sensors, actuators, laptop + OS, etc) 
 
 ## 1. Video Presentation
-
+https://drive.google.com/file/d/13gdHr8eEfZFXVztwB7vjUEcWh-SdYJhg/view?usp=drive_link
 ## 2. Project Summary
 ### Device Description
 This project is a smart badminton training device embedded in the racket. It automatically counts swings and detects successful hits using onboard motion sensors, and light up a LED and sound a buzzer for each succefful hit to give a boost to users. 
