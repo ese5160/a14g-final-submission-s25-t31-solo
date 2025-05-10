@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Badminton Trainer - Project Showcase</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f7f7f7;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2 {
+      color: #1a237e;
+    }
+    a {
+      color: #1565c0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    iframe {
+      display: block;
+      margin: 1rem auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    img {
+      max-width: 100%;
+      margin: 1rem 0;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Smart Badminton Trainer</h1>
+  <p><strong>Team 31 – Solo</strong><br>
+  Members: Yuhe Zhang, Zihao Cai</p>
+
+  <div class="section">
+    <h2>🎥 Project Demo Video</h2>
+    <iframe src="https://drive.google.com/file/d/13gdHr8eEfZFXVztwB7vjUEcWh-SdYJhg/preview" width="720" height="480" allow="autoplay"></iframe>
+  </div>
+
+  <div class="section">
+    <h2>📝 Project Summary</h2>
+    <p>This is a smart badminton training device embedded in the racket. It automatically counts swings and detects successful hits using onboard motion sensors. For each hit, the LED lights up and a buzzer sounds to motivate users during practice.</p>
+    <p>The system uses the <strong>SAMW25 Xplained Pro</strong> board running FreeRTOS, and the <strong>MPU6050</strong> IMU to detect swings and hits. The device supports two modes (training and competition), with visual (RGB LED) and audio (buzzer) feedback. It also uploads hit data in real time to a <strong>Node-RED dashboard</strong> via Wi-Fi.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔧 Components</h2>
+    <ul>
+      <li><strong>MPU6050 IMU</strong> – motion and impact sensing (I2C)</li>
+      <li><strong>SAMW25</strong> – embedded host with Wi-Fi and FreeRTOS</li>
+      <li><strong>RGB LED</strong> – visual mode and hit feedback</li>
+      <li><strong>Buzzer (AST-02308MR-R)</strong> – driven by 2N3904 + PWM for audio alerts</li>
+      <li><strong>2 Buttons</strong> – toggle mode, start/stop sessions</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ System Design & Testing</h2>
+    <p>We overcame hardware issues with the custom PCB by switching to the SAMW25 board. FreeRTOS tasks were used for modular control (Sensor, Button, LED, Buzzer, Control). Hit detection was improved with filtering and timing thresholds. All feedback was verified with debug prints and oscilloscope testing.</p>
+    <p>We learned how to manage asynchronous tasks, smooth sensor noise, and build robust feedback systems. Future improvements may include OTA firmware updates and an OLED display.</p>
+  </div>
+
+  <div class="section">
+    <h2>🖥️ Live Demo & Code</h2>
+    <ul>
+      <li><a href="https://github.com/ese5160/final-project-t31-solo" target="_blank">Final Embedded Firmware (GitHub)</a></li>
+      <li><a href="http://172.208.29.201:1880/ui/#!/1" target="_blank">Node-RED Dashboard (Live UI)</a></li>
+      <li><a href="https://upenn-eselabs.365.altium.com/designs/D12EB9F7-FE5B-483B-BA67-F4D2DDD64F86" target="_blank">Altium PCB Project</a></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📷 Project Photos</h2>
+    <img src="IMG_4147.jpg" alt="Project photo 1">
+    <img src="IMG_4149.jpg" alt="Project photo 2">
+  </div>
+
+  <footer>
+    <p>© 2025 Yuhe Zhang & Zihao Cai — ESE5160 Final Project | University of Pennsylvania</p>
+  </footer>
+
+</body>
+</html>
